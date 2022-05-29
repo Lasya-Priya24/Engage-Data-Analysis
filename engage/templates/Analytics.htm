@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Analytics</title>
+</head>
+<body>
+     
+    <p style="text-align: center; font-size:40px;font-weight:700">Analytics</p>
+    
+    {% block content1 %}
+    <div>
+        <table width="100%" border="0px solid black">
+            <tr>
+                <td><center> {% load static %} <img src="{% static "output/op1.jpg" %}" alt="home"width="600px" /></center></td>
+                <td style="background: rgb(255,255,255);
+                background: linear-gradient(90deg, rgba(255,255,255,1) 13%, rgba(152,152,152,0.8914916308320203) 95%);"><p style="font-size: 24px; font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; font-style: italic; font: 600; ">This Bar plot clearly depicts that Maruti Suzuki , Hyndai and Mahindra 
+                    are the Top Three most sold car brands. With Maruti Suzuki having a 
+                    count figure of 150 , Hyundai 125+ and Mahindra 100+</p></td>
+            </tr>
+            <tr>
+                <td style="background: rgb(177,177,177);
+                background: linear-gradient(90deg, rgba(177,177,177,1) 23%, rgba(255,255,255,0.8774860285911239) 100%);">
+                <p style="font-size: 24px; font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; font-style: italic; font: 600; " >The countplot represents the count of vehicles having various number of cylinders. This shows 
+                    people prefer 4 cylinder engines more than any other configuration. Engines having 3 cylinders
+                     are the second most preference for customers.</p>
+
+                </td>
+                <td><center>{% load static %} <img src="{% static "output/output2.jpg" %}" alt="home" width="600px"/></center></td>
+                
+            </tr>
+            <tr>
+                <td><center>{% load static %} <img src="{% static "output/op3.jpg" %}" alt="home" width="600px"/></center></td>
+                <td style="background: rgb(255,255,255);
+                background: linear-gradient(90deg, rgba(255,255,255,1) 13%, rgba(152,152,152,0.8914916308320203) 95%);"><p style="font-size: 24px; font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; font-style: italic; font: 600; ">This countplot here displays the most preferred DriveTrain by the customers. It is intelligible
+                    that FWD - Forward Wheel Drive  has the highest preference with no other class of Drivetrain 
+                    having comparable scores.</p>
+                </td>
+            </tr>
+            <tr>
+                <td style="background: rgb(177,177,177);
+                background: linear-gradient(90deg, rgba(177,177,177,1) 23%, rgba(255,255,255,0.8774860285911239) 100%);"><p style="font-size: 24px; font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; font-style: italic; font: 600; ">The histogram illustrates the frequency of cars having displacement in bin range of 200.
+                    It is distinct that a Displacement of 1000 - 1500 is most preferred by customers.</p>
+                </td>
+                <td><center>{% load static %} <img src="{% static "output/op4.jpg" %}" alt="home"width="600px" /></center></td>
+                
+            </tr>
+
+        </table>
+    </div>
+    {% endblock %}
+    {% block content %}
+    
+    <div style="margin-top: -25px ;background: rgb(255,255,255); height: 80px;
+    background: linear-gradient(0deg, rgba(255,255,255,1) 13%, rgba(152,152,152,0.8914916308320203) 71%);" >
+           <p style="font-size: 26px ; text-align: center;">The Pairplot describes different configuration choosen by customers
+                 over each of them distinctly</p>
+           
+        
+        </div>
+        {% load static %} <img src="{% static "output/output5.jpg" %}" alt="home" />
+    {% endblock %}
+</body>
+</html>

@@ -1,0 +1,168 @@
+<!DOCTYPE html>  
+<html lang="en">  
+<head>  
+    <meta charset="UTF-8">  
+    <title>Data Analytics Home Page</title>  
+</head>  
+<style>
+    .button {
+      display: inline-block;
+      border-radius: 4px;
+      background-color: #1eb0f4;
+      border: none;
+      color: #FFFFFF;
+      text-align: center;
+      font-size: 20px;
+      padding: 20px;
+      width: 200px;
+      transition: all 0.5s;
+      cursor: pointer;
+      margin: 5px;
+    }
+    
+    .button span {
+      cursor: pointer;
+      display: inline-block;
+      position: relative;
+      transition: 0.5s;
+    }
+    
+    .button span:after {
+      content: '\00bb';
+      position: absolute;
+      opacity: 0;
+      top: 0;
+      right: -20px;
+      transition: 0.5s;
+    }
+    
+    .button:hover span {
+      padding-right: 25px;
+    }
+    
+    .button:hover span:after {
+      opacity: 1;
+      right: 0;
+    }
+
+    .button2:hover {
+  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+}
+    </style>
+<body> 
+    <div>
+        <table border="0px solid black" width="100%">
+            <td width="30%">
+                {% block logo %}
+                {% load static %} <img src="{% static "media/MEB.png" %}" alt="home" height="130px"/>
+                {% endblock %}
+            </td>
+            <td  width="30%">
+                <p style="text-align: center;font-size: 32px;font-weight: 850;color: rgb(6, 6, 120) ;">Microsoft Engage 2022</p>
+                <p style="text-align: center;font-size: 20px;font-weight: 500;">Challenge : Data Analysis</p>
+            </td>
+            <td width="30%">
+                <p style="text-align: center; font-size: 24px;font-weight: 500;">Vakkapatla Lasya Priya</p>
+                <p style="text-align: center;">lasyapriyavakkapatla@gmail.com</p>
+            </td>
+
+        </table>
+    </div> 
+
+<div>
+    <table border="0px solid black" width="100%">
+        <tr style="background: rgb(0,107,162);
+        background: linear-gradient(90deg, rgba(0,107,162,1) 50%, rgba(252,252,252,0.8914916308320203) 100%);">
+        <td>
+
+            {% block content %}
+    <p>
+        {% load static %} <img src="{% static "media/DA.jpg" %}" alt="home" height="650px"/>
+    </p>
+    {% endblock %}
+        </td>
+        <td >
+            <ul>
+                <li><h2 style="margin-top: 100px;">Data analytics is a process of analyzing raw datasets
+                     in order to derive a conclusion regarding the 
+                     information they hold.</h2></li>
+                <li><h2 style="margin-top: 100px;">Data analytics processes and techniques may use applications 
+                    operating on machine learning algorithms, simulation,
+                     and automated systems.</h2></li>
+                <li><h2 style="margin-top: 100px;">They help organizations understand their clients better,
+                     analyze their promotional campaigns, customize content, 
+                     create content strategies, and develop products.</h2></li>
+
+            </ul>
+        </td>
+    </tr>
+    </table>
+</div>
+
+<div style="margin-top: 100px;">
+    <table border="0px solid black" width="100%">
+        <td>
+            <ol>
+                <h2>Data Analytics helps with : </h2>
+                <li><h2> Personalize the customer experience</h2></li>
+                <li><h2>Inform business decision-making</h2></li>
+                <li><h2>Streamline operations</h2></li>
+                <li><h2>Mitigate risk and handle setbacks</h2></li>
+                <li><h2>Enhance security</h2></li>
+
+            </ol>
+        </td>
+        <td>
+
+            {% block content2 %}
+    <p>
+        {% load static %} <img src="{% static "media/BDA.png" %}" alt="home" height="400px"/>
+    </p>
+    {% endblock %}
+        </td>
+       
+
+    </table>
+</div>
+<div style="margin-top: 100px;">
+    <table border="0px solid black" width="100%">
+        <tr>
+            {% block icon1 %}
+            <td style="width: 30%;">
+                
+                <center>
+                    {% load static %} <img src="{% static "media/i1.jpg" %}" alt="home" height="400px"/>
+                </center>
+                
+            </td>
+            <td style="width: 30%;">
+                <center>
+                    {% load static %} <img src="{% static "media/i2.png" %}" alt="home" height="400px"/>
+                </center>
+            </td>
+            <td style="width: 30%;">
+                <center>
+                    {% load static %} <img src="{% static "media/i3.png" %}" alt="home" height="400px"/>
+                </center>
+            </td>
+            {% endblock %}
+        </tr>
+        <tr>
+            <td><center><button class="button button2" onclick="window.location.href='pre1/'" >Preprocessing Stage 1</button></center></td>
+            <td><center><button class="button button2" onclick="window.location.href='pre2/'" >Preprocessing Stage 2</button></center></td>
+            <td><center><button class="button button2" onclick="window.location.href='post/'" >Post Processing Stage</button></center></td>
+        </tr>
+        
+    </table>
+</div>
+<div width="100%" style="margin-top: 100px;">
+    {% block icon2 %}
+    {% load static %} <center><img src="{% static "media/Analytics.png" %}" alt="home" height="600px"/>
+            
+    </center>
+    {% endblock %}
+    <center><button class="button button2" onclick="window.location.href='analytics/'" >Analytics</button></center>
+</div>
+<a href="analytics/">Analytics</a> 
+</body>  
+</html>
